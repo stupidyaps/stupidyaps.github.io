@@ -1,61 +1,103 @@
-<!doctype html>
-<html lang="en" class="h-100">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="John Rafael D. Yapchiongco">
-        <title>YΛPS Landing Site</title>
-        <link rel="icon" type="text/png" href="/static/favicon.png">
+<!DOCTYPE html>
+<html lang="en">
 
-        <!-- Bootstrap core CSS -->
-        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
-        
-        <style>
-          .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-          }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafael Yapchiongco</title>
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cursorstyle.css" />
+  <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
 
-          @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-              font-size: 3.5rem;
-            }
-          }
-        </style>
+<body class="noselect">
+  <script>
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
-        
-        <!-- Custom styles for this template -->
-        <link rel="stylesheet" type="text/css" href="/static/indexStyle.css">
-    </head>
-    <body class="d-flex h-100 text-center text-white bg-dark" id="home">
-      
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-          <header class="mb-auto">
-            <div>
-              <h3 class="float-md-start mb-0">JRY</h3>
-              <nav class="nav nav-masthead justify-content-center float-md-end">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                <a class="nav-link" href="/templates/about">About</a>
-                <a class="nav-link" href="/templates/contact">Contact</a>
-              </nav>
-            </div>
-          </header>
+    document.onkeydown = function (e) {
 
-            <main class="px-3">
-              <h1 id="h1GimmeSpace">YΛPS said Hi./</h1>
-              <p class="lead" id="Quote">"Try not to become a man of success. Rather become a man of value." <br>-Albert Einstein</p>
-              <p class="lead">
-                <a href="/templates/about" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-              </p>
-            </main>
+      // disable F12 key
+      if (e.keyCode == 123) {
+        return false;
+      }
 
-            <footer class="mt-auto text-white-50">
-              <p>This is the Index template with <a href="https://getbootstrap.com/" class="text-white">Bootstrap 5.0.2</a> integration, was modified by <a href="https://twitter.com/Yapshiii" class="text-white">@Yapshiii</a> for educational purposes, mainly an exercise for ITMC231.</p>
-            </footer>
-        </div>
-    </body>
+      // disable I key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        return false;
+      }
+
+      // disable J key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        return false;
+      }
+
+      // disable U key
+      if (e.ctrlKey && e.keyCode == 85) {
+        return false;
+      }
+    }
+
+  </script>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li id="about" style="font-weight: bold;">/About</li>
+        <li id="contact" style="font-weight: bold;">/Contact</li>
+        <li id="resume"><a class="resume" target="_blank" href="yapchiongco-resume.pdf">/Resume</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>rafael-yapchiongco:$<span class="cursor">|</span></h1>
+    </main>
+  </div>
+  <div class="container2">
+    <div id="app"></div>
+  </div>
+
+  <div class="hidden">
+    <div id="about-content">
+      <h2>about-me:$<span class="cursor">|</span></h2>
+      <p>
+        Work in Progress.. <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget iaculis lacus, quis auctor eros.
+        Nam egestas tortor vitae dictum pretium. Praesent in finibus enim. Ut eu nisl volutpat, tincidunt leo ac,
+        euismod eros.
+        Donec vestibulum vestibulum aliquam. Nam et magna lacus. Nunc luctus aliquam nibh, a porta justo viverra id.
+        Pellentesque et mattis neque. In et suscipit sem, id gravida nunc. Quisque a augue ut neque feugiat ultrices
+        eget et nisl.
+        Vestibulum porttitor dictum nunc, in hendrerit est luctus ut. Nunc interdum mi gravida nisi dignissim, nec
+        interdum turpis convallis.
+        Phasellus dapibus lorem commodo nulla feugiat luctus. Etiam sit amet auctor nibh. Donec risus elit, semper at
+        lobortis et, rhoncus non dolor.
+      </p>
+    </div>
+    <div id="contact-content">
+      <h2>contact-me:$<span class="cursor">|</span></h2>
+
+      <p>Work in Progress.. <br> You can contact me at the email below
+      <ul>
+        <li>Email: <a href="mailto:jr.yapchiongco@gmail.com">jr.yapchiongco@gmail.com</a></li>
+        and reach me on
+        <li><a href="https://www.linkedin.com/in/rafael-yapchiongco/" target="_blank">LinkedIn</a></li>
+        </p>
+      </ul>
+    </div>
+  </div>
+
+  <div class="inner-cursor"></div>
+  <div class="outer-cursor"></div>
+  <script src="js/winbox.bundle.js"></script>
+  <script src="js/winbox.maker.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="js/typewriter.implement.js"></script>
+  <script src="js/cursor.effect.js"></script>
+  <!-- <footer>
+      <p id="copy">Copyright(c) <a href="https://www.linkedin.com/in/rafael-yapchiongco/">Rafael Yapchiongco</a><br><span style="#"></p>
+    </footer> -->
+</body>
+
 </html>

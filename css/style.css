@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --text-color: #05d9e8;
+}
+
+
+
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  background-color: #01012b;
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.6;
+  cursor: none;
+}
+
+h1 {
+  color: #ff2a6d;
+  font-size: 50px;
+  letter-spacing: -3px;
+  margin-bottom: 20px;
+
+  text-shadow: 0px 0px 5px rgba(255, 69, 127, 0.5);
+}
+
+h2,
+span {
+  color: var(--text-color);
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #05d9e8;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.7);
+}
+
+a:hover {
+  color: #d1f7ff;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.5);
+  cursor: none;
+}
+
+.resume {
+  color: #05d9e8;
+  text-decoration: none;
+  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.7);
+}
+
+li {
+  font-size: 115%;
+  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.7);
+}
+
+li:hover {
+  color: #d1f7ff;
+  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.7);
+  cursor: none;
+}
+
+p {
+  margin: 20px 0;
+}
+
+nav {
+  width: 30%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul li {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.container {
+  max-width: 2000px;
+  padding-top: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 {
+  max-width: 2000px;
+  padding-left: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: left;
+}
+
+.wb-body {
+  background: #01012b;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+  cursor: pointer;
+}
+
+.cursor {
+  text-shadow: 0px 0px 2px rgba(1, 1, 43, 1);
+  font-weight: 700;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: var(--text-color);
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  left: 50%;
+  top: 50%;
+
+  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.5);
+
+  height: 300px;
+
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+.dollar:before {
+  content: '$';
+  color: #005678;
+}
+
+.gt::before {
+  content: '\003E';
+  color: #005678;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
