@@ -9,6 +9,6 @@ typewriter
     .typeString('<span class="dollar"> Let\'s be acquainted, contact me')
     .pauseFor(2000)
     .deleteChars(31)
-    .typeString('I am looking forward with getting to know youm.')
+    .typeString('I am looking forward with getting to know you.')
     .pauseFor(5000)
     .start();
