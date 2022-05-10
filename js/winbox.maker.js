@@ -29,7 +29,7 @@ contact.addEventListener('click', () => {
     title: 'Contact Me',
     background: '#00aa00',
     width: '400px',
-    height: '400px',
+    height: '425px',
     top: 50,
     right: 50,
     bottom: 50,

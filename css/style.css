@@ -10,7 +10,9 @@
   --text-color: #05d9e8;
 }
 
-
+html {
+  cursor: none;
+}
 
 body {
   font-family: 'Ubuntu Mono', monospace;
@@ -69,13 +71,8 @@ li {
   text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.7);
 }
 
-li:hover {
-  color: #d1f7ff;
-  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.7);
-  cursor: none;
-}
-
 p {
+  text-justify: inter-ideograph;
   margin: 20px 0;
 }
 
@@ -94,6 +91,13 @@ nav ul li {
   cursor: pointer;
 }
 
+nav ul li:hover {
+  color: #d1f7ff;
+  text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.7);
+  cursor: none;
+  cursor: pointer;
+}
+
 .container {
   max-width: 2000px;
   padding-top: 100px;
@@ -105,11 +109,12 @@ nav ul li {
 }
 
 .container2 {
-  max-width: 2000px;
-  padding-left: 500px;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
   display: flex;
   justify-content: left;
+  text-align: left;
 }
 
 .wb-body {
@@ -148,9 +153,6 @@ footer {
 }
 
 #app {
-  left: 50%;
-  top: 50%;
-
   text-shadow: 0px 0px 2px rgba(209, 247, 255, 0.5);
 
   height: 300px;
