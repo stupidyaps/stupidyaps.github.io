@@ -1,6 +1,7 @@
 .inner-cursor{
   position: fixed;
-  left: 750px;
+  left: 32%;
+  top: 28%;
   width: 10px;
   height: 10px;
   transform: translate(-50%, -50%);
@@ -19,7 +20,8 @@
 
 .outer-cursor{
   position: fixed;
-  left: 750px;
+  left: 32%;
+  top: 28%;
   width: 25px;
   height: 25px;
   transform: translate(-50%, -50%);
