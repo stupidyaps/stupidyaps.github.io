@@ -132,7 +132,7 @@
   <script src="flutter_bootstrap.js" async></script>
   <script>
     // function([string1, string2],target id,[color1,color2])    
-    consoleText(['Loading...', 'Why R U Here?', 'Made with Love.❤️'], 'text', ['White', 'White', 'White']);
+    consoleText(['Why R U Here?', 'Hi! :P', 'Loading...', 'Made with Love.❤️'], 'text', ['White', 'White', 'White', 'White']);
 
     function consoleText(words, id, colors) {
       if (colors === undefined) colors = ['#fff'];
@@ -157,14 +157,14 @@
             target.setAttribute('style', 'color:' + colors[0])
             letterCount += x;
             waiting = false;
-          }, 600)
+          }, 100)
         } else if (letterCount === words[0].length + 1 && waiting === false) {
           waiting = true;
           window.setTimeout(function () {
             x = -1;
             letterCount += x;
             waiting = false;
-          }, 600)
+          }, 100)
         } else if (waiting === false) {
           target.innerHTML = words[0].substring(0, letterCount)
           letterCount += x;
@@ -180,7 +180,7 @@
 
           visible = true;
         }
-      }, 200)
+      }, 100)
     }
   </script>
 </body>
