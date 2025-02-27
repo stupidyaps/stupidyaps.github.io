@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,12 +28,161 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wdth,wght@75..100,400..900&display=swap" rel="stylesheet">
+
+  <title>Rafael Yapchiongco | Portfolio</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      background-color: #101010;
+    }
+
+    .loading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .loader {
+      width: 80px;
+      aspect-ratio: 1;
+      color: #F3E500;
+      position: relative;
+      background: radial-gradient(10px, currentColor 94%, #0000);
+    }
+
+    .loader:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background:
+        radial-gradient(18px at bottom right, #0000 94%, currentColor) top left,
+        radial-gradient(18px at bottom left, #0000 94%, currentColor) top right,
+        radial-gradient(18px at top right, #0000 94%, currentColor) bottom left,
+        radial-gradient(18px at top left, #0000 94%, currentColor) bottom right;
+      background-size: 40px 40px;
+      background-repeat: no-repeat;
+      animation: l18 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+    }
+
+    @keyframes l18 {
+      33% {
+        inset: -10px;
+        transform: rotate(0deg)
+      }
+
+      66% {
+        inset: -10px;
+        transform: rotate(90deg)
+      }
+
+      100% {
+        inset: 0;
+        transform: rotate(90deg)
+      }
+    }
+
+    .console-container {
+      padding-top: 40px;
+      font-family: tektur, serif;
+      font-size: 2em;
+      text-align: center;
+      height: 100px;
+      width: 300px;
+      display: block;
+      color: white;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .console-underscore {
+      display: inline-block;
+      position: relative;
+      top: -0.14em;
+      left: 10px;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="loading">
+    <div class="loader"></div>
+    <div class='console-container'><span id='text'></span>
+      <div class='console-underscore' id='console'>&#95;</div>
+    </div>
+  </div>
+  <script src="main.dart.js" type="application/javascript"></script>
   <script src="flutter_bootstrap.js" async></script>
+  <script>
+    // function([string1, string2],target id,[color1,color2])    
+    consoleText(['Loading...', 'Why R U Here?', 'Made with Love.❤️'], 'text', ['White', 'White', 'White']);
+
+    function consoleText(words, id, colors) {
+      if (colors === undefined) colors = ['#fff'];
+      var visible = true;
+      var con = document.getElementById('console');
+      var letterCount = 1;
+      var x = 1;
+      var waiting = false;
+      var target = document.getElementById(id)
+      target.setAttribute('style', 'color:' + colors[0])
+      window.setInterval(function () {
+
+        if (letterCount === 0 && waiting === false) {
+          waiting = true;
+          target.innerHTML = words[0].substring(0, letterCount)
+          window.setTimeout(function () {
+            var usedColor = colors.shift();
+            colors.push(usedColor);
+            var usedWord = words.shift();
+            words.push(usedWord);
+            x = 1;
+            target.setAttribute('style', 'color:' + colors[0])
+            letterCount += x;
+            waiting = false;
+          }, 600)
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+          waiting = true;
+          window.setTimeout(function () {
+            x = -1;
+            letterCount += x;
+            waiting = false;
+          }, 600)
+        } else if (waiting === false) {
+          target.innerHTML = words[0].substring(0, letterCount)
+          letterCount += x;
+        }
+      }, 120)
+      window.setInterval(function () {
+        if (visible === true) {
+          con.className = 'console-underscore hidden'
+          visible = false;
+
+        } else {
+          con.className = 'console-underscore'
+
+          visible = true;
+        }
+      }, 200)
+    }
+  </script>
 </body>
+
 </html>
