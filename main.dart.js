@@ -76248,7 +76248,7 @@ A.qP.prototype={
 ab(){var s=$.am()
 return new A.Oi(new A.oM(B.es,s),new A.oM(B.es,s),new A.oM(B.es,s),new A.oM(B.es,s))}}
 A.Oi.prototype={
-L(a){var s,r,q,p,o,n,m,l,k,j,i=this,h=null,g=A.bq(a,h,t.w).w.a.a,f=g>1000,e=f?500:550
+L(a){var s,r,q,p,o,n,m,l,k,j,i=this,h=null,g=A.bq(a,h,t.w).w.a.a,f=g>1000,e=f?500:600
 f=f?g*0.4:g*0.65
 s=A.bQ("Message me",h,h,h,h,h,h,h,A.un().$3$color$fontSize$fontWeight(B.h,25,B.G),h,h,h)
 r=A.bt(h,10,h)
@@ -76301,12 +76301,8 @@ $S:496}
 A.q4.prototype={
 ab(){return new A.LY()}}
 A.LY.prototype={
-L(a){var s,r,q,p=null,o=A.bq(a,p,t.w).w.a.a,n=o>1000,m=n?500:450
-n=n?o*0.3:o*0.65
-s=t.E
-r=A.fv(A.b([A.bQ("Contact Info",p,p,p,p,p,p,p,A.un().$3$color$fontSize$fontWeight(B.h,25,B.G),p,p,p)],s),B.T,B.a3,B.R)
-q=A.bt(p,15,p)
-return A.bt(A.fi(A.b([r,q,A.bQ("I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!",p,p,p,p,p,p,p,A.dE().$3$color$fontSize$fontWeight(B.E,o<430?13:15,B.t),p,p,p),A.bt(p,15,p),new A.kJ("Name","Rafael Yapchiongco",B.Ci,u.q,p),new A.kJ("Location","102 Zone 4 Sta. Lucia, Magarao, Camarines Sur",B.Cl,"https://www.google.com/maps/@13.6541049,123.1811559,3a,83.4y,3.82h,90.72t/data=!3m8!1e1!3m6!1sQOi-WL0M9Fang8zwUsjPiQ!2e0!5s20160601T000000!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.7179513799622441%26panoid%3DQOi-WL0M9Fang8zwUsjPiQ%26yaw%3D3.8196429722899!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D",p),new A.kJ("Call Me","+63 921 315 8302",B.Cn,"tel:+639213158302",p),new A.kJ("Email Me","jr.yapchiongco@gmail.com",B.Cj,"mailto:jr.yapchiongco@gmail.com",p)],s),B.bo,B.a3,B.R),m,n)}}
+L(a){var s=null,r=A.bq(a,s,t.w).w.a.a,q=r>1000?r*0.3:r*0.65,p=t.E,o=A.fv(A.b([A.bQ("Contact Info",s,s,s,s,s,s,s,A.un().$3$color$fontSize$fontWeight(B.h,25,B.G),s,s,s)],p),B.T,B.a3,B.R),n=A.bt(s,15,s)
+return A.bt(A.fi(A.b([o,n,A.bQ("I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!",s,s,s,s,s,s,s,A.dE().$3$color$fontSize$fontWeight(B.E,r<430?13:15,B.t),s,s,s),A.bt(s,15,s),new A.kJ("Name","Rafael Yapchiongco",B.Ci,u.q,s),new A.kJ("Location","102 Zone 4 Sta. Lucia, Magarao, Camarines Sur",B.Cl,"https://www.google.com/maps/@13.6541049,123.1811559,3a,83.4y,3.82h,90.72t/data=!3m8!1e1!3m6!1sQOi-WL0M9Fang8zwUsjPiQ!2e0!5s20160601T000000!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.7179513799622441%26panoid%3DQOi-WL0M9Fang8zwUsjPiQ%26yaw%3D3.8196429722899!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDIyNS4wIKXMDSoASAFQAw%3D%3D",s),new A.kJ("Call Me","+63 921 315 8302",B.Cn,"tel:+639213158302",s),new A.kJ("Email Me","jr.yapchiongco@gmail.com",B.Cj,"mailto:jr.yapchiongco@gmail.com",s)],p),B.bo,B.a3,B.R),500,q)}}
 A.nH.prototype={
 ab(){return new A.NW($.alA[0],B.h,B.h,null,null)}}
 A.NW.prototype={
