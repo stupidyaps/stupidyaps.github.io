@@ -76283,7 +76283,7 @@ $0(){var s=0,r=A.J(t.H),q=this,p,o,n
 var $async$$0=A.F(function(a,b){if(a===1)return A.G(b,r)
 while(true)switch(s){case 0:p=q.a
 o=t.N
-n=A.S1(null,"jr.yapchiongco@gmail.com",new A.agn().$1(A.aq(["subject",p.r.a.a,"body","                              "+p.w.a.a+"\n\n                              You can contact me through the following details:\n                              Name: "+p.e.a.a+"\n                              Email: "+p.f.a.a+"\n                              "],o,o)),null,"mailto")
+n=A.S1(null,"jr.yapchiongco@gmail.com",new A.agn().$1(A.aq(["subject",p.r.a.a,"body","                              "+p.w.a.a+"\n\n                              You can contact me through the following details:\n                              Name: "+p.e.a.a+"\n                              Email: "+p.f.a.a+"\n\n                              - Sent from Portfolio Contact Form -\n                              "],o,o)),null,"mailto")
 s=2
 return A.P(A.aob(n),$async$$0)
 case 2:if(b)A.j3(n,B.fA,null)
